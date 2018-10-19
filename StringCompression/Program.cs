@@ -34,11 +34,7 @@ namespace StringCompression
             int counter = 1;
             for (int i = 0; i < input.Length; i++)
             {
-                if (i == input.Length - 1)
-                {
-                    output += $"{input[i]}{counter}";
-                }
-                else if (input[i] == input[i + 1])
+                if (i != input.Length - 1 && input[i] == input[i + 1])
                 {
                     counter++;
                 }
